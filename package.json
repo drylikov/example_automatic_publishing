@@ -1,0 +1,21 @@
+{
+  "name": "@drylikov/example_automatic_publishing",
+  "version": "1.0.0",
+  "description": "this is an example that auto-publishes on npm version",
+  "main": "index.js",
+  "scripts": {
+    "preversion": "npm test",
+    "postversion": "npm publish --access=public",
+    "test": "tap",
+    "postpublish": "git push origin --all --follow-tags"
+  },
+  "repository": "https://github.com/drylikob/example_automatic_publishing",
+  "tap": {
+    "check-coverage": true
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "index.js"
+  ]
+}
